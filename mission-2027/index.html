@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>우간다 어린이 교육 선교 2027</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: consulting-report column — exhibit-numbered sections, action titles, source footnotes, 5 lens colours carried through */
+:root {
+  --bg: #ffffff; --surface: #f4f6f8; --ink: #0b1d2e; --ink-2: #44546a; --rule: #d6dde5;
+  --c-black: #051c2c;   /* BLACK · 실행 */
+  --c-red: #c8382a;     /* RED · 논리와 근거 */
+  --c-silver: #7b8a99;  /* SILVER · 현장 전문성 */
+  --c-blue: #1f5fd6;    /* BLUE · 공감 */
+  --c-gold: #b8891a;    /* GOLD · 의사결정자 */
+  --serif: "Noto Serif KR", "Batang", Georgia, serif;
+  --sans: "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #08131d; --surface: #0f2030; --ink: #e8eef4; --ink-2: #a5b3c2; --rule: #24384b;
+  --c-black: #9fc3e6; --c-red: #f07364; --c-silver: #9dadbd; --c-blue: #6c9cff; --c-gold: #e3b54a; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #08131d; --surface: #0f2030; --ink: #e8eef4; --ink-2: #a5b3c2; --rule: #24384b;
+  --c-black: #9fc3e6; --c-red: #f07364; --c-silver: #9dadbd; --c-blue: #6c9cff; --c-gold: #e3b54a; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.7; margin: 0; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-block: 40px 80px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header.top { border-bottom: 3px solid var(--c-black); padding-bottom: 28px; display: grid; gap: 14px; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); }
+h1 { font-family: var(--serif); font-size: clamp(30px, 5vw, 50px); line-height: 1.2; margin: 0; text-wrap: balance; color: var(--c-black); }
+.sub { font-size: 18px; color: var(--ink-2); max-width: 760px; margin: 0; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 13px; color: var(--ink-2); font-family: var(--mono); }
+section { padding-block: 44px 8px; border-bottom: 1px solid var(--rule); }
+h2 { font-family: var(--serif); font-size: clamp(22px, 3vw, 30px); line-height: 1.35; margin: 6px 0 16px; text-wrap: balance; }
+h3 { font-size: 17px; margin: 0 0 6px; }
+p { margin: 0 0 14px; max-width: 72ch; }
+.sec-no { font-family: var(--mono); font-size: 12px; color: var(--c-blue); letter-spacing: .1em; }
+.exec { display: grid; gap: 0; border-top: 1px solid var(--rule); margin-top: 20px; }
+.exec div { display: grid; grid-template-columns: 56px 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.exec b.n { font-family: var(--serif); font-size: 28px; color: var(--c-blue); line-height: 1; }
+.exec p { margin: 0; }
+.lens { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin: 18px 0; }
+.lens div { border-top: 4px solid var(--lc); padding: 12px 0 4px; min-width: 0; }
+.lens b { display: block; font-family: var(--mono); font-size: 12px; letter-spacing: .1em; color: var(--lc); }
+.lens span { font-size: 14px; color: var(--ink-2); display: block; }
+.exhibit { margin: 26px 0 18px; }
+.ex-head { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; border-bottom: 1px solid var(--ink); padding-bottom: 6px; margin-bottom: 12px; }
+.ex-no { font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
+.ex-title { font-weight: 700; font-size: 15px; }
+.src { font-size: 12px; color: var(--ink-2); margin-top: 6px; }
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+.grid2 > * { min-width: 0; }
+svg { display: block; width: 100%; height: auto; }
+svg text { fill: var(--ink); font-family: var(--sans); }
+svg .muted { fill: var(--ink-2); }
+.so { background: var(--surface); border-left: 4px solid var(--c-blue); padding: 14px 18px; margin: 10px 0 16px; font-size: 15px; }
+.so b { color: var(--c-blue); }
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; min-width: 640px; }
+th, td { text-align: left; padding: 10px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-size: 12px; font-family: var(--mono); letter-spacing: .05em; color: var(--ink-2); border-bottom: 1px solid var(--ink); font-weight: 500; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+tr.us td { background: color-mix(in srgb, var(--c-blue) 9%, transparent); font-weight: 500; }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+.tiers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 14px 0; }
+.tier { border: 1px solid var(--rule); padding: 18px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.tier.rec { border: 2px solid var(--c-blue); }
+.tier .tag { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; color: var(--c-blue); }
+.tier .price { font-family: var(--serif); font-size: 30px; color: var(--c-black); line-height: 1.2; }
+.tier .price small { font-family: var(--sans); font-size: 13px; color: var(--ink-2); }
+.tier ul { margin: 6px 0 0; padding-left: 18px; font-size: 14px; color: var(--ink-2); }
+.kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--rule); margin: 16px 0; }
+.kpis div { padding: 16px 12px; border-right: 1px solid var(--rule); min-width: 0; }
+.kpis div:last-child { border-right: 0; }
+.kpis b { font-family: var(--serif); font-size: 34px; color: var(--c-black); display: block; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.kpis span { font-size: 13px; color: var(--ink-2); }
+.review { display: grid; gap: 0; }
+.review div { display: grid; grid-template-columns: 120px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+.review b { font-family: var(--mono); font-size: 13px; color: var(--lc); }
+.review p { margin: 0; font-size: 15px; }
+footer { padding-top: 28px; font-size: 13px; color: var(--ink-2); }
+footer ol { padding-left: 20px; }
+a { color: var(--c-blue); }
+@media (max-width: 760px) {
+  .grid2, .tiers { grid-template-columns: 1fr; }
+  .lens { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kpis div:nth-child(2) { border-right: 0; }
+  .review div { grid-template-columns: 1fr; gap: 2px; }
+}
+</style>
+
+<style>
+.pillars { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--ink); margin: 14px 0; }
+.pillars > div { padding: 16px 14px 18px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); min-width: 0; display: grid; gap: 6px; align-content: start; }
+.pillars > div:last-child { border-right: 0; }
+.pillars .pn { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; color: var(--pc); }
+.pillars h3 { font-family: var(--serif); font-size: 21px; margin: 0; }
+.pillars .cad { font-size: 13px; color: var(--ink-2); }
+.pillars ul { margin: 4px 0 0; padding-left: 18px; font-size: 14px; }
+.pillars .k { font-family: var(--mono); font-size: 12px; color: var(--pc); border-top: 1px dashed var(--rule); padding-top: 8px; margin-top: 4px; }
+.stm { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 14px 0; }
+.stm > div { border-top: 3px solid var(--c-blue); padding-top: 10px; min-width: 0; }
+.stm .when { font-family: var(--mono); font-size: 12px; color: var(--c-blue); }
+.stm ul { margin: 6px 0 0; padding-left: 18px; font-size: 14px; color: var(--ink-2); }
+@media (max-width: 760px) { .pillars, .stm { grid-template-columns: 1fr; } .pillars > div { border-right: 0; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">전략 제안서 · 토의용 초안 · 2026년 11월</div>
+  <h1>우간다 어린이 교육 선교 2027:<br>행사 중심에서 현지 교사 중심으로</h1>
+  <p class="sub">예배 · 성경캠프 · 성경교육 · 교사교육 네 기둥, 단기선교팀 연계, AI 교육 워크숍 서비스의 차별화 · 타깃 · 포지셔닝 · 가격, 2027년 분기별 로드맵과 마일스톤 제안</p>
+  <div class="meta"><span>대상: 후원 교회 선교위원회 · 단기선교팀 리더 · 현지 파트너 교회</span><span>기간: 2027.01 ~ 2027.12</span><span>버전 1.0</span><span><a href="uganda-mission-2027-1min.mp4">▶ 1분 설명 영상</a> · <a href="../">우간다 역사 백과</a></span></div>
+</header>
+
+<section>
+  <div class="sec-no">요약</div>
+  <h2>2027년의 성패는 단기팀이 떠난 뒤에도 매주 예배와 성경공부가 이어지는가로 판단함</h2>
+  <div class="exec">
+    <div><b class="n">1</b><p><b>수요는 구조적으로 큼.</b> 우간다 인구 약 4,590만 명 중 0~14세가 약 46%이고 기독교 인구 비중은 약 84%다. 기독교 가정의 0~14세 어린이는 모델 추정 약 1,770만 명이다.</p></div>
+    <div><b class="n">2</b><p><b>네 기둥을 하나의 주기로 묶음.</b> 매주 어린이 예배, 52주 성경교육 과정, 방학마다 성경캠프, 그리고 이 셋을 이끄는 교사교육을 한 해 일정 안에 맞물린다.</p></div>
+    <div><b class="n">3</b><p><b>단기선교팀은 조연으로 재배치함.</b> 현지 교사가 캠프와 예배를 이끌고 단기팀은 준비·지원·후속을 맡는다. 출발 전 6주 훈련과 귀국 후 90일 후속을 의무화한다.</p></div>
+    <div><b class="n">4</b><p><b>AI 워크숍은 오프라인 우선 교사 육성 서비스로 차별화함.</b> 하루짜리 AI 세미나가 아니라 인터넷 없는 교실에서 매주 쓰는 AI 교안 워크숍을 세 단계 가격(USD 1,200 / 6,500 / 18,000)으로 제공하고, 현지 교사는 소액 참가비로 주인이 된다.</p></div>
+    <div><b class="n">5</b><p><b>2027년 목표.</b> 훈련 교사 300명, 정기 예배 참여 어린이 12,000명, 성경캠프 3회(그중 1회는 현지 교사 단독), 현지 인증 트레이너 24명.</p></div>
+  </div>
+  <div class="ex-head" style="margin-top:28px"><span class="ex-no">기획 프레임</span><span class="ex-title">5-Color 렌즈로 계획을 세우고 검토함</span></div>
+  <div class="lens">
+    <div style="--lc:var(--c-black)"><b>BLACK · 실행</b><span>무엇을, 언제, 누가 할 것인가</span></div>
+    <div style="--lc:var(--c-red)"><b>RED · 논리</b><span>근거 수치와 인과가 맞는가</span></div>
+    <div style="--lc:var(--c-silver)"><b>SILVER · 현장</b><span>선교·교육 베테랑이 짚는 디테일</span></div>
+    <div style="--lc:var(--c-blue)"><b>BLUE · 공감</b><span>현지 교사·어린이·단기팀의 마음</span></div>
+    <div style="--lc:var(--c-gold)"><b>GOLD · 결정자</b><span>선교위원장이 5분 안에 결정할 수 있나</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-no">01 · 상황 진단 (탐색적 데이터 분석)</div>
+  <h2>가장 젊은 인구 구조와 낮은 인프라 접근성이 ‘사람 중심·오프라인 우선’ 사역을 요구함</h2>
+  <div class="grid2">
+    <div class="exhibit"><div class="ex-head"><span class="ex-no">Exhibit 1</span><span class="ex-title">연령 구조: 인구의 약 2/3가 25세 미만</span></div><svg id="ex1" viewBox="0 0 480 260" role="img" aria-label="연령대별 인구 비중 막대그래프"></svg><div class="src">출처: CIA World Factbook 2024 추정치, UBOS 2024 인구총조사 총인구(45.9M). 근사치.</div></div>
+    <div class="exhibit"><div class="ex-head"><span class="ex-no">Exhibit 2</span><span class="ex-title">종교 구성: 교파가 고르게 분포해 초교파 교안이 필요</span></div><svg id="ex2" viewBox="0 0 480 260" role="img" aria-label="종교 구성 비율 막대그래프"></svg><div class="src">출처: UBOS 2014 인구총조사. 2024 조사 종교 항목 확인 필요.</div></div>
+  </div>
+  <div class="grid2">
+    <div class="exhibit"><div class="ex-head"><span class="ex-no">Exhibit 3</span><span class="ex-title">접근성: 디지털 교재보다 인쇄 교안과 그림 카드가 먼저</span></div><svg id="ex3" viewBox="0 0 480 250" role="img" aria-label="전기, 휴대전화, 인터넷 접근성 비교"></svg><div class="src">출처: World Bank WDI(전력 접근 2022), DataReportal Digital 2024(인터넷 이용, 모바일 회선). 근사치.</div></div>
+    <div class="exhibit"><div class="ex-head"><span class="ex-no">Exhibit 4</span><span class="ex-title">규모 모델: 필요한 교사 수는 우리 목표의 수천 배</span></div><svg id="ex4" viewBox="0 0 480 250" role="img" aria-label="어린이 수에서 필요 교사 수까지의 추정 단계"></svg><div class="src">모델 가정: 0~14세 46% × 기독교 84%, 교사 1명당 어린이 25명. 추정치이며 실측이 아님.</div></div>
+  </div>
+  <div class="so"><b>So what.</b> 어린이도 많고 교재도 많다. 부족한 것은 매주 아이들 앞에 서는 훈련된 교사다. 그래서 2027년 사역의 단위는 ‘행사 횟수’가 아니라 ‘매주 예배와 성경공부를 이끄는 현지 교사 수’로 잡는다.</div>
+</section>
+
+<section>
+  <div class="sec-no">02 · 네 기둥</div>
+  <h2>예배·성경교육은 매주, 캠프는 방학마다, 교사교육은 그 모두를 받쳐 주는 주기로 운영함</h2>
+  <div class="pillars">
+    <div style="--pc:var(--c-blue)"><span class="pn">기둥 1 · 매주</span><h3>어린이 예배</h3><span class="cad">주일 오전 60분, 교회별</span>
+      <ul><li>찬양·말씀·기도·응답 활동 4단 순서 표준화</li><li>루간다어·영어 찬양집 40곡, 율동 영상 SD카드</li><li>연령 분반: 6~9세 / 10~14세</li></ul>
+      <span class="k">KPI · 정기 예배 교회 30곳, 평균 출석 40명</span></div>
+    <div style="--pc:var(--c-black)"><span class="pn">기둥 2 · 52주</span><h3>성경교육</h3><span class="cad">연간 4학기 × 13주 교안</span>
+      <ul><li>창조에서 교회까지 연대기 순 52과</li><li>인쇄 교안, 그림 카드, 암송 카드 (오프라인 우선)</li><li>교파 중립 핵심 + 교회별 보충 단원</li></ul>
+      <span class="k">KPI · 52과 현지화 완료, 암송 달성 어린이 60%</span></div>
+    <div style="--pc:var(--c-gold)"><span class="pn">기둥 3 · 방학</span><h3>성경캠프</h3><span class="cad">우간다 학교 방학에 맞춤</span>
+      <ul><li>5월 시범 캠프 (현지 교사, 2일)</li><li>8월 연합 캠프 (단기팀 연계, 4일)</li><li>12월 자립 캠프 (현지 교사 단독, 3일)</li></ul>
+      <span class="k">KPI · 3회, 연인원 2,400명, 캠프 후 예배 정착 30%</span></div>
+    <div style="--pc:var(--c-red)"><span class="pn">기둥 4 · 상시</span><h3>교사교육</h3><span class="cad">훈련 → 코칭 → 인증 → 재생산</span>
+      <ul><li>기초 과정 3회 워크숍 (말씀 전달, 학급 운영, 아동보호)</li><li>월 1회 교실 코칭 방문과 10분 피드백</li><li>트레이너 과정과 인증 (공동 강의 2회 이상)</li></ul>
+      <span class="k">KPI · 교사 300명, 활동률 70%, 트레이너 24명</span></div>
+  </div>
+  <div class="exhibit"><div class="ex-head"><span class="ex-no">Exhibit 5</span><span class="ex-title">연간 사역 주기: 우간다 학기와 한국 방학이 겹치는 8월에 연합 캠프를 둠</span></div><svg id="ex5" viewBox="0 0 900 260" role="img" aria-label="2027년 월별 학기, 방학, 캠프, 단기팀 일정"></svg><div class="src">우간다 학사일정은 일반적인 3학기제 기준 근사치. 2027년 교육부 공지로 확정 필요.</div></div>
+</section>
+
+<section>
+  <div class="sec-no">03 · 단기선교팀 연계</div>
+  <h2>단기팀은 ‘대신하는 팀’이 아니라 ‘세워 주는 팀’으로 역할을 바꿈</h2>
+  <div class="exhibit"><div class="ex-head"><span class="ex-no">Exhibit 6</span><span class="ex-title">역할 전환: 같은 캠프, 다른 주인공</span></div>
+  <div class="tbl"><table>
+    <thead><tr><th>항목</th><th>기존 방식</th><th>2027 연계 방식</th></tr></thead>
+    <tbody>
+      <tr><td>캠프 설교·성경공부</td><td>단기팀이 통역을 통해 진행</td><td>현지 교사가 진행, 단기팀은 보조 교사로 각 반에 1명 배치</td></tr>
+      <tr><td>준비</td><td>한국에서 프로그램 완성 후 출국</td><td>현지 교사와 함께 만든 교안을 출발 6주 전 공유</td></tr>
+      <tr><td>단기팀 강점 활용</td><td>공연·선물 중심</td><td>찬양·율동 교사 훈련, 공작 키트, 의료·위생 교육</td></tr>
+      <tr><td>사진·영상</td><td>어린이 얼굴 위주 홍보</td><td>아동보호 동의 범위 안에서만 촬영, 교사 활동 중심 기록</td></tr>
+      <tr class="us"><td>귀국 후</td><td>보고회로 종료</td><td>90일 후속: 교사 1명과 1:1 기도·후원 연결, 분기 성과 보고 수신</td></tr>
+    </tbody>
+  </table></div></div>
+  <div class="stm">
+    <div><span class="when">출발 전 · D-42 ~ D-1</span><h3>준비 6주</h3><ul><li>문화·아동보호 교육 2회</li><li>현지 교안 사전 학습, 반별 보조 역할 배정</li><li>현지 교사와 화상 미팅 1회</li></ul></div>
+    <div><span class="when">현장 · 4~7일</span><h3>지원</h3><ul><li>반별 보조 교사, 찬양·율동 훈련</li><li>교사 워크숍 1회 공동 진행</li><li>저녁마다 현지 교사와 평가 회의</li></ul></div>
+    <div><span class="when">귀국 후 · D+1 ~ D+90</span><h3>후속 90일</h3><ul><li>현지 교사 1:1 기도·후원 연결</li><li>12월 자립 캠프 물품·교안 지원</li><li>분기 성과 보고서로 후원 교회 보고</li></ul></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-no">04 · AI 교육 워크숍 서비스 · 차별화 · 타깃 · 포지셔닝 · 가격</div>
+  <h2>AI 워크숍은 누구나 하지만, 인터넷 없는 교실에서 주일학교 교사가 매주 쓰게 만드는 곳은 없음</h2>
+  <p>2025~2026년 한국 교회와 선교단체에서 ‘AI 활용 워크숍’은 흔한 상품이 됐다. 대부분 하루짜리 도구 소개이고, 강사는 방문자이며, 인터넷 연결을 전제로 한다. 우간다 현장의 전력 접근은 약 47%, 인터넷 이용은 약 27%다(Exhibit 3). 그래서 같은 이름의 워크숍이라도 현지 교실에서는 다음 주에 쓰이지 않는다.</p>
+  <div class="exhibit"><div class="ex-head"><span class="ex-no">Exhibit 8</span><span class="ex-title">포지셔닝 맵: ‘지속성’과 ‘현지 적합성’ 두 축의 빈자리를 차지</span></div><svg id="ex9" viewBox="0 0 720 380" role="img" aria-label="AI 교육 워크숍 유형별 포지셔닝 맵"></svg><div class="src">각 유형의 위치는 일반적 운영 방식에 대한 정성 평가. 특정 단체를 지칭하지 않음.</div></div>
+  <div class="exhibit"><div class="ex-head"><span class="ex-no">Exhibit 9</span><span class="ex-title">유형별 비교: 차이는 ‘워크숍 이후 90일’에서 생김</span></div>
+  <div class="tbl"><table>
+    <thead><tr><th>기준</th><th>일반 AI 활용 세미나</th><th>단기팀 교사 세미나</th><th>온라인 AI 강좌</th><th>제안: 주일학교 AI 교안 워크숍</th></tr></thead>
+    <tbody>
+      <tr><td>기간</td><td>반나절~1일</td><td>1~3일</td><td>자기 주도</td><td>3~12개월 코호트</td></tr>
+      <tr><td>연결 전제</td><td>상시 인터넷</td><td>해당 없음</td><td>상시 인터넷</td><td>오프라인 우선 (사전 생성 교안 + SD카드, 주 1회 연결이면 충분)</td></tr>
+      <tr><td>배우는 것</td><td>도구 사용법</td><td>수업 방법</td><td>도구 사용법</td><td>AI로 52주 교안·그림 카드·퀴즈를 만들고 검토하는 법</td></tr>
+      <tr><td>후속</td><td>없음</td><td>거의 없음</td><td>없음</td><td>월 1회 교실 코칭, 교안 품질 검토</td></tr>
+      <tr><td>안전·신학 검토</td><td>개인 판단</td><td>해당 없음</td><td>개인 판단</td><td>AI 생성물은 2인 검토(성경 정확성·아동 적합성) 후 사용</td></tr>
+      <tr class="us"><td>성과 측정</td><td>만족도</td><td>참석자 수</td><td>수료율</td><td>교안 준비 시간 50% 단축, 교사 활동률 70%</td></tr>
+    </tbody>
+  </table></div></div>
+  <div class="grid2">
+    <div><h3>차별화 1 · 오프라인 우선</h3><p>AI는 트레이너의 노트북 한 대에서 주 1회 돌린다. 교사들은 인쇄 교안과 SD카드로 받는다. 인터넷이 없는 교회도 같은 품질의 교안을 쓴다.</p></div>
+    <div><h3>차별화 2 · 교사를 세우는 교사</h3><p>방문 강사가 도구를 보여 주고 떠나는 방식이 아니다. 현지 트레이너가 AI 교안 제작과 검토를 맡도록 인증한다. 2027년 24명이 목표다.</p></div>
+    <div><h3>차별화 3 · 신앙과 아동 보호에 맞춘 AI 리터러시</h3><p>AI가 만든 성경 이야기를 그대로 쓰지 않는다. 본문 대조, 문화 적합성, 아동 보호 세 가지 체크리스트로 사람이 검토한다.</p></div>
+    <div><h3>차별화 4 · 네 기둥과 연결</h3><p>워크숍 결과물은 그 주의 어린이 예배, 52주 성경교육, 다음 성경캠프 교안으로 바로 들어간다. 따로 노는 행사가 되지 않는다.</p></div>
+  </div>
+
+  <div class="exhibit"><div class="ex-head"><span class="ex-no">Exhibit 10</span><span class="ex-title">타깃: 돈을 내는 사람, 쓰는 사람, 혜택받는 사람을 나눔</span></div>
+  <div class="tbl"><table>
+    <thead><tr><th>구분</th><th>세그먼트</th><th>핵심 니즈</th><th>우리의 약속</th></tr></thead>
+    <tbody>
+      <tr><td><span class="dot" style="background:var(--c-gold)"></span>1차 구매자</td><td>한국 중대형 교회 선교위원회, 교단 선교부 (단기팀 파송 교회)</td><td>헌금이 실제 변화로 이어진 증거, 단기팀의 의미 있는 역할</td><td>분기 성과 보고서, 8월 연합 캠프에서 단기팀이 맡을 역할</td></tr>
+      <tr><td><span class="dot" style="background:var(--c-silver)"></span>2차 구매자</td><td>기독 NGO, 현지 기독교 학교</td><td>교사 역량 강화의 검증된 프로그램</td><td>인증 트레이너 파견, 교안 라이선스</td></tr>
+      <tr><td><span class="dot" style="background:var(--c-blue)"></span>사용자</td><td>현지 주일학교 교사·전도사 (캄팔라, 무코노, 와키소 우선)</td><td>다음 주일에 바로 쓰는 교안, 인정받는 자격</td><td>주간 교안 꾸러미, 월 1회 코칭, 수료·트레이너 인증</td></tr>
+      <tr><td><span class="dot" style="background:var(--c-red)"></span>수혜자</td><td>6~14세 어린이와 가정</td><td>안전하고 재미있는 배움</td><td>검토된 교안과 아동보호를 지키는 교사</td></tr>
+    </tbody>
+  </table></div></div>
+  <div class="so"><b>포지셔닝 문장.</b> 우간다 어린이 사역을 후원하는 한국 교회를 위해, 하루짜리 AI 세미나 대신 현지 주일학교 교사가 인터넷 없이도 매주 좋은 교안으로 가르치고 다음 교사를 세우는 12개월 교사 육성 서비스를 제공한다. 일반 AI 워크숍과 달리 교실 코칭과 분기 성과 데이터로 변화를 증명한다.</div>
+
+  <h3 style="margin-top:28px">가격 정책</h3>
+  <div class="tiers">
+    <div class="tier"><span class="tag">진입 · SEED</span><h3>씨앗 워크숍</h3><div class="price">$1,200 <small>/ 1회 (약 170만 원)</small></div><ul><li>1일, 교사 30명</li><li>AI 교안 4주분 시연·실습, 인쇄 교안</li><li>사후 30일 질문방</li></ul></div>
+    <div class="tier rec"><span class="tag">권장 · GROW</span><h3>성장 과정</h3><div class="price">$6,500 <small>/ 3개월 (약 910만 원)</small></div><ul><li>교사 60명, 워크숍 3회</li><li>교실 코칭 방문 6회</li><li>교안 13주분, 분기 성과 보고서</li></ul></div>
+    <div class="tier"><span class="tag">확장 · MULTIPLY</span><h3>1년 파트너십</h3><div class="price">$18,000 <small>/ 12개월 (약 2,520만 원)</small></div><ul><li>교회 10곳, 교사 120명</li><li>현지 트레이너 8명 인증, 8월 연합 캠프 설계</li><li>교안 52주분, 연간 임팩트 리포트</li></ul></div>
+  </div>
+  <div class="grid2">
+    <div class="exhibit"><div class="ex-head"><span class="ex-no">Exhibit 11</span><span class="ex-title">어린이 1인당 비용: 씨앗이 가장 낮고, 파트너십은 1인당 USD 3.75로 가장 높지만 12개월 코칭·인증을 포함</span></div><svg id="ex10" viewBox="0 0 480 230" role="img" aria-label="상품별 교사 1인당, 어린이 1인당 비용"></svg><div class="src">가정: 교사 1명이 어린이 40명을 맡음. 환율 USD 1 = 1,400원.</div></div>
+    <div><h3>가격 원칙</h3>
+      <p><b>현지 공동부담.</b> 현지 교사는 워크숍 1회당 UGX 10,000(약 USD 2.7)을 낸다. 무료보다 출석과 지속률을 높이는 주인의식 장치다. 형편이 어려운 교회는 후원 교회가 대신 낸다.</p>
+      <p><b>단기팀 연계 할인.</b> 8월 연합 캠프에 단기팀을 보내는 교회는 성장 과정 비용의 15%를 단기팀 사전 훈련(6주)으로 대체할 수 있다.</p>
+      <p><b>교사 후원 상품.</b> 개인 후원자는 ‘교사 한 명 1년 세우기’ USD 150(월 약 1.75만 원)으로 참여한다.</p>
+      <p><b>가치 지표.</b> 가격은 행사 일수가 아니라 ‘활동 교사 1명·1개월’ 기준으로 설명한다. 파트너십 기준 약 USD 12.5다.</p>
+    </div>
+  </div>
+</section>
+<script>
+(() => {
+  const NS = 'http://www.w3.org/2000/svg';
+  const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+  const el = (svg, tag, a, txt) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); if (txt != null) e.textContent = txt; svg.appendChild(e); return e; };
+  function draw() {
+    const navy = css('--c-black'), blue = css('--c-blue'), silver = css('--c-silver'), rule = css('--rule');
+    { const svg = document.getElementById('ex9'); svg.innerHTML = ''; const L = 70, T = 20, Wd = 620, Ht = 300;
+      el(svg, 'rect', { x: L, y: T, width: Wd, height: Ht, fill: 'none', stroke: rule });
+      el(svg, 'line', { x1: L + Wd / 2, y1: T, x2: L + Wd / 2, y2: T + Ht, stroke: rule, 'stroke-dasharray': '4 4' });
+      el(svg, 'line', { x1: L, y1: T + Ht / 2, x2: L + Wd, y2: T + Ht / 2, stroke: rule, 'stroke-dasharray': '4 4' });
+      el(svg, 'text', { x: L + Wd / 2, y: T + Ht + 34, 'text-anchor': 'middle', 'font-size': 13, class: 'muted' }, '현지 적합성 (인터넷 전제·통역 의존 → 오프라인·현지 트레이너) →');
+      el(svg, 'text', { x: 22, y: T + Ht / 2, 'text-anchor': 'middle', 'font-size': 13, class: 'muted', transform: `rotate(-90 22 ${T + Ht / 2})` }, '지속성 (1회 행사 → 12개월 코칭) →');
+      [['일반 AI 활용 세미나', .12, .14, silver, 20], ['온라인 AI 강좌', .2, .4, silver, 14], ['단기팀 교사 세미나', .45, .16, silver, 18], ['NGO 교사훈련', .58, .55, silver, 20], ['주일학교 AI 교안 워크숍', .84, .84, blue, 26]].forEach(([n, x, y, c, r]) => {
+        const cx = L + x * Wd, cy = T + (1 - y) * Ht; el(svg, 'circle', { cx, cy, r, fill: c, opacity: c === blue ? .95 : .55 });
+        el(svg, 'text', { x: x > .7 ? cx - r - 6 : cx + r + 6, y: cy + 5, 'font-size': 13, 'font-weight': c === blue ? 700 : 400, 'text-anchor': x > .7 ? 'end' : 'start' }, n); });
+      el(svg, 'text', { x: L + Wd - 10, y: T + 20, 'text-anchor': 'end', 'font-size': 12, fill: blue }, '빈자리: 지속 + 현지 적합'); }
+    { const svg = document.getElementById('ex10'); svg.innerHTML = ''; const rows = [['씨앗 워크숍', 1200 / 30], ['성장 과정', 6500 / 60], ['1년 파트너십', 18000 / 120]];
+      el(svg, 'text', { x: 140, y: 16, 'font-size': 12, class: 'muted' }, '교사 1인당 USD'); el(svg, 'text', { x: 330, y: 16, 'font-size': 12, class: 'muted' }, '어린이 1인당 USD');
+      rows.forEach(([n, perT], i) => { const y = 30 + i * 62, perC = perT / 40;
+        el(svg, 'text', { x: 130, y: y + 22, 'text-anchor': 'end', 'font-size': 13 }, n);
+        el(svg, 'rect', { x: 140, y: y + 6, width: perT * 1.05, height: 24, fill: silver });
+        el(svg, 'text', { x: 146 + perT * 1.05, y: y + 23, 'font-size': 13, 'font-weight': 700 }, '$' + perT.toFixed(0));
+        el(svg, 'rect', { x: 330, y: y + 6, width: perC * 30, height: 24, fill: i === 2 ? blue : navy });
+        el(svg, 'text', { x: 336 + perC * 30, y: y + 23, 'font-size': 13, 'font-weight': 700 }, '$' + perC.toFixed(2)); });
+      el(svg, 'text', { x: 140, y: 222, 'font-size': 11, class: 'muted' }, '씨앗은 1회성, 파트너십은 12개월 코칭·트레이너 인증 포함. 1인당 비용 차이는 지속 기간 차이'); }
+  }
+  draw();
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', draw);
+  new MutationObserver(draw).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+})();
+</script>
+<section>
+  <div class="sec-no">05 · 2027 로드맵과 마일스톤</div>
+  <h2>분기마다 하나의 관문을 통과해야 다음 단계로 예산을 집행함</h2>
+  <div class="kpis"><div><b>300</b><span>훈련 교사 (활동률 70% 이상)</span></div><div><b>12,000</b><span>정기 예배 참여 어린이</span></div><div><b>3</b><span>성경캠프 (1회는 현지 단독)</span></div><div><b>24</b><span>현지 인증 트레이너</span></div></div>
+  <div class="exhibit"><div class="ex-head"><span class="ex-no">Exhibit 12</span><span class="ex-title">2027 실행 로드맵</span></div><svg id="ex8" viewBox="0 0 900 360" role="img" aria-label="2027년 분기별 실행 로드맵 간트 차트"></svg></div>
+  <div class="tbl"><table>
+    <thead><tr><th>분기</th><th>마일스톤</th><th>KPI</th><th>다음 단계 관문 (Go / No-go)</th></tr></thead>
+    <tbody>
+      <tr><td>Q1 준비</td><td>파트너 교회 20곳 조사, 52과 교안 현지화 1학기분, 아동보호 정책 서명</td><td>교회 20곳, 교사 명단 150명</td><td>파트너 MOU 10곳 이상</td></tr>
+      <tr><td>Q2 교사 훈련</td><td>기초 과정 3개 코호트, 교실 코칭 시작, 5월 시범 캠프</td><td>교사 90명 수료, 시범 캠프 300명</td><td>코칭 관찰 점수 20% 상승</td></tr>
+      <tr><td>Q3 연합 캠프·확장</td><td>8월 단기팀 연합 캠프, 와키소 확장, 트레이너 후보 40명</td><td>누적 교사 220명, 캠프 1,200명</td><td>캠프 후 4주 예배 정착 30%</td></tr>
+      <tr><td>Q4 자립·인증</td><td>12월 현지 교사 단독 캠프, 트레이너 24명 인증, 연간 임팩트 리포트</td><td>누적 교사 300명, 어린이 12,000명</td><td>단독 캠프 운영 성공, 2028 계획 승인</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <div class="sec-no">06 · 리스크와 대응</div>
+  <h2>가장 큰 리스크는 단기팀 의존과 아동 안전이며, 사전 훈련과 자립 캠프로 낮춤</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>리스크</th><th>영향</th><th>대응</th></tr></thead>
+    <tbody>
+      <tr><td>단기팀 철수 후 사역 중단</td><td>높음</td><td>12월 현지 단독 캠프로 자립 검증, 트레이너 인증</td></tr>
+      <tr><td>아동 안전 사고, 사진 오남용</td><td>매우 높음</td><td>전원 아동보호 서약, 2인 이상 교실 원칙, 촬영 동의 범위 준수</td></tr>
+      <tr><td>교파 간 갈등</td><td>중간</td><td>교파 중립 핵심 교안, 교회별 보충 단원 허용</td></tr>
+      <tr><td>학사일정 변경, 치안·보건 이슈</td><td>중간</td><td>캠프 일정 2주 완충, 대체 장소 확보, 여행 경보 확인</td></tr>
+      <tr><td>단기팀 일정 변동</td><td>중간</td><td>캠프는 현지 교사가 주도하므로 단기팀 규모와 무관하게 진행</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <div class="sec-no">07 · 5-Color 검토 결과</div>
+  <h2>다섯 렌즈의 지적을 반영해 초안에서 다섯 가지를 바꿈</h2>
+  <div class="review">
+    <div style="--lc:var(--c-black)"><b>BLACK · 실행</b><p>목표를 ‘행사 횟수’에서 ‘매주 사역하는 교사 수’로 바꾸고 분기별 Go/No-go 관문을 넣었다.</p></div>
+    <div style="--lc:var(--c-red)"><b>RED · 논리</b><p>모든 수치에 출처와 ‘근사치·모델 추정’ 표시를 달았다. 캠프 성과는 참석 인원이 아니라 캠프 후 예배 정착률로 잰다.</p></div>
+    <div style="--lc:var(--c-silver)"><b>SILVER · 현장</b><p>캠프를 우간다 학교 방학에 맞추고, 한국 방학과 겹치는 8월에만 단기팀을 연계했다. 교재는 인쇄·오프라인 우선으로 바꿨다.</p></div>
+    <div style="--lc:var(--c-blue)"><b>BLUE · 공감</b><p>현지 교사를 손님이 아닌 주인으로 세웠다. 단기팀에는 ‘주인공을 돕는 기쁨’을, 어린이에게는 매주 만나는 같은 선생님을 남긴다.</p></div>
+    <div style="--lc:var(--c-gold)"><b>GOLD · 결정자</b><p>선교위원장이 첫 화면에서 결정할 수 있도록 요약 4줄과 2027 KPI 4개를 맨 앞에 두었다.</p></div>
+  </div>
+</section>
+
+<footer>
+  <b>자료와 가정</b>
+  <ol>
+    <li>총인구 45.9M: Uganda Bureau of Statistics, 2024 National Population and Housing Census (잠정 결과).</li>
+    <li>연령 구조: CIA World Factbook 2024 추정치 (0~14세 46.6%, 15~24세 21.4%, 25~54세 27.0%, 55세 이상 5.0%).</li>
+    <li>종교 구성: UBOS 2014 Census (가톨릭 39.3%, 성공회 32.0%, 오순절·거듭남 11.1%, 이슬람 13.7%, 재림교 1.7%, 기타 2.2%).</li>
+    <li>전력 접근 약 47%: World Bank WDI 2022. 인터넷 이용 약 27%, 모바일 회선 인구 대비 약 70%: DataReportal Digital 2024 Uganda.</li>
+    <li>우간다 학사일정은 3학기제 일반 패턴 기준이며 매년 교육부 공지로 확정한다.</li>
+    <li>KPI, 캠프 규모, 시장 규모는 본 제안의 가정이며 2027년 1분기 조사 후 확정한다. 외부 공유 전 최신 자료로 수치를 확인한다.</li>
+  </ol>
+</footer>
+</div>
+
+<script>
+(() => {
+  const NS = 'http://www.w3.org/2000/svg';
+  const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+  function el(svg, tag, attrs, text) { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; svg.appendChild(e); return e; }
+  function hbars(id, rows, max, fmt, colorFn, labelW = 150) {
+    const svg = document.getElementById(id); const W = +svg.viewBox.baseVal.width, rowH = 40, top = 14;
+    rows.forEach((r, i) => { const y = top + i * rowH, w = (W - labelW - 70) * r[1] / max;
+      el(svg, 'text', { x: labelW - 10, y: y + 20, 'text-anchor': 'end', 'font-size': 13 }, r[0]);
+      el(svg, 'rect', { x: labelW, y: y + 6, width: Math.max(1, w), height: 22, fill: colorFn(i, r) });
+      el(svg, 'text', { x: labelW + w + 8, y: y + 22, 'font-size': 13, 'font-weight': 700 }, fmt(r[1])); });
+  }
+  function draw() {
+    document.querySelectorAll('svg[id^=ex]').forEach(s => s.innerHTML = '');
+    const navy = css('--c-black'), blue = css('--c-blue'), silver = css('--c-silver'), red = css('--c-red'), gold = css('--c-gold'), rule = css('--rule'), ink2 = css('--ink-2');
+    hbars('ex1', [['0~14세', 46.6], ['15~24세', 21.4], ['25~54세', 27.0], ['55세 이상', 5.0]], 50, v => v.toFixed(1) + '%', i => i === 0 ? blue : silver);
+    el(document.getElementById('ex1'), 'text', { x: 150, y: 196, 'font-size': 12, class: 'muted' }, '0~14세 약 2,140만 명 (45.9M × 46.6%)');
+    el(document.getElementById('ex1'), 'text', { x: 150, y: 216, 'font-size': 12, class: 'muted' }, '25세 미만 합계 68.0%');
+    hbars('ex2', [['가톨릭', 39.3], ['성공회', 32.0], ['오순절·거듭남', 11.1], ['이슬람', 13.7], ['재림교·기타', 3.9]], 45, v => v.toFixed(1) + '%', i => i < 3 ? navy : silver);
+    el(document.getElementById('ex2'), 'text', { x: 150, y: 222, 'font-size': 12, class: 'muted' }, '기독교 합계 약 84% (가톨릭+성공회+오순절+재림교)');
+    hbars('ex3', [['모바일 회선 (인구 대비)', 70], ['전력 접근 가구', 47], ['인터넷 이용자', 27]], 100, v => '약 ' + v + '%', i => [silver, blue, red][i], 170);
+    el(document.getElementById('ex3'), 'text', { x: 170, y: 160, 'font-size': 12, class: 'muted' }, '모바일 회선 수에는 1인 다회선이 포함되어 실제 보유율보다 높음');
+    el(document.getElementById('ex3'), 'text', { x: 170, y: 180, 'font-size': 12, class: 'muted' }, '농촌 지역은 전력·인터넷 접근이 전국 평균보다 낮음');
+    { const svg = document.getElementById('ex4'); const st = [['총인구', 45.9], ['0~14세 어린이', 21.1], ['기독교 가정 어린이', 17.7], ['필요 교사 (1:25)', 0.708], ['2027 목표 교사', 0.0003]];
+      st.forEach((s, i) => { const y = 12 + i * 44, w = Math.max(4, 300 * Math.sqrt(s[1] / 45.9));
+        el(svg, 'rect', { x: 160, y, width: w, height: 30, fill: i === 4 ? red : (i === 3 ? blue : navy), opacity: i < 3 ? (1 - i * .2) : 1 });
+        el(svg, 'text', { x: 150, y: y + 20, 'text-anchor': 'end', 'font-size': 13 }, s[0]);
+        el(svg, 'text', { x: 168 + w, y: y + 20, 'font-size': 13, 'font-weight': 700 }, i === 4 ? '300명' : i === 3 ? '약 70.8만 명' : s[1] + 'M'); });
+      el(svg, 'text', { x: 160, y: 240, 'font-size': 11, class: 'muted' }, '막대 길이는 제곱근 척도 (작은 값도 보이도록)'); }
+    // Exhibit 5: annual cycle
+    { const svg = document.getElementById('ex5'); const L = 140, Wd = 740, mw = Wd / 12; const M = ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
+      M.forEach((m, i) => { el(svg, 'text', { x: L + mw * (i + .5), y: 16, 'text-anchor': 'middle', 'font-size': 12 }, m); el(svg, 'line', { x1: L + mw * i, y1: 24, x2: L + mw * i, y2: 236, stroke: rule }); });
+      const rowY = r => 30 + r * 42;
+      [['우간다 학교', 0], ['한국 방학', 1], ['성경캠프', 2], ['단기선교팀', 3], ['교사교육', 4]].forEach(([n, r]) => el(svg, 'text', { x: L - 10, y: rowY(r) + 20, 'text-anchor': 'end', 'font-size': 13 }, n));
+      const bar = (r, s, e, c, t, op = 1) => { el(svg, 'rect', { x: L + mw * s, y: rowY(r) + 6, width: mw * (e - s), height: 22, fill: c, opacity: op, rx: 2 }); if (t) el(svg, 'text', { x: L + mw * s + 6, y: rowY(r) + 22, 'font-size': 11, fill: '#fff' }, t); };
+      bar(0, 1, 4.6, silver, '1학기', .8); bar(0, 5.3, 7.8, silver, '2학기', .8); bar(0, 8.7, 11.2, silver, '3학기', .8);
+      bar(1, 0, 1.9, blue, '겨울', .55); bar(1, 6.7, 7.8, blue, '여름', .55); bar(1, 11.7, 12, blue, '', .55);
+      bar(2, 4.6, 4.95, gold); bar(2, 7.8, 8.25, gold); bar(2, 11.3, 11.7, gold);
+      el(svg, 'text', { x: L + mw * 4.6, y: rowY(2) + 44, 'font-size': 11, fill: ink2 }, '시범'); el(svg, 'text', { x: L + mw * 7.8, y: rowY(2) + 44, 'font-size': 11, fill: ink2 }, '연합'); el(svg, 'text', { x: L + mw * 11.0, y: rowY(2) + 44, 'font-size': 11, fill: ink2 }, '자립');
+      bar(3, 6.6, 7.8, blue, '준비', .45); bar(3, 7.8, 8.3, blue, ''); bar(3, 8.3, 11.3, blue, '90일 후속', .3);
+      bar(4, 3, 12, red, '기초 과정 · 월 1회 코칭 · 트레이너 과정', .85); }
+    // Exhibit 7: gantt
+    { const svg = document.getElementById('ex8'); const L = 230, Wd = 650, T = 30; const q = ['Q1 준비', 'Q2 교사 훈련', 'Q3 연합 캠프·확장', 'Q4 자립·인증'];
+      q.forEach((s, i) => { el(svg, 'text', { x: L + Wd * (i + .5) / 4, y: 18, 'text-anchor': 'middle', 'font-size': 13, 'font-weight': 700 }, s);
+        el(svg, 'line', { x1: L + Wd * i / 4, y1: T, x2: L + Wd * i / 4, y2: 342, stroke: rule }); });
+      const tasks = [['파트너 교회 조사·MOU', 0, 3, navy], ['52과 교안 현지화', .5, 9, navy], ['아동보호 정책·서약', 0, 2, red], ['어린이 예배 표준 순서 도입', 2, 12, blue], ['교사 기초 과정 (코호트)', 3, 10, red], ['교실 코칭 방문', 3.5, 12, red], ['성경캠프 5월·8월·12월', 4.5, 11.8, gold], ['단기팀 준비·연합·후속', 6.5, 11, silver], ['트레이너 인증·임팩트 리포트', 9.5, 12, gold]];
+      tasks.forEach(([n, s, e, c], i) => { const y = T + 8 + i * 31;
+        el(svg, 'text', { x: L - 10, y: y + 15, 'text-anchor': 'end', 'font-size': 13 }, n);
+        if (n.startsWith('성경캠프')) [[4.6, 4.95], [7.8, 8.25], [11.3, 11.7]].forEach(([a, b]) => el(svg, 'rect', { x: L + Wd * a / 12, y: y + 3, width: Wd * (b - a) / 12, height: 16, fill: c, rx: 2 }));
+        else el(svg, 'rect', { x: L + Wd * s / 12, y: y + 3, width: Wd * (e - s) / 12, height: 16, fill: c, rx: 2 }); });
+      [[3, 'MOU 10곳'], [6, '관찰점수 +20%'], [9, '예배 정착 30%'], [12, '자립 캠프 성공']].forEach(([m, t]) => { const x = L + Wd * m / 12 - (m === 12 ? 2 : 0);
+        el(svg, 'path', { d: `M${x} ${T + 296} l7 9 l-7 9 l-7 -9 z`, fill: red });
+        el(svg, 'text', { x: x - 10, y: T + 309, 'text-anchor': 'end', 'font-size': 11, fill: ink2 }, t); }); }
+  }
+  draw();
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', draw);
+  new MutationObserver(draw).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+})();
+</script>
+
+</body>
+</html>

@@ -6,6 +6,7 @@ This is a year-by-year encyclopedia of Ugandan history with black-pen line-art a
 - 🇰🇷 한국어: [`index.html`](index.html)
 - 🇬🇧 English: [`index-en.html`](index-en.html)
 - ✒️ 펜화 백과 (지리·역사·문화 12항목): [`pen.html`](pen.html)
+- 🗺️ 2027 어린이 교육 선교 전략 (로드맵·마일스톤, 1분 설명 영상): [`mission-2027/`](mission-2027/)
 
 ## 구성 · Contents
 | 부 · Part | 시대 · Era | 사건 수 · Events |
