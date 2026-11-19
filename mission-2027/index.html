@@ -348,7 +348,7 @@ a { color: var(--c-blue); }
       el(svg, 'text', { x: labelW + w + 8, y: y + 22, 'font-size': 13, 'font-weight': 700 }, fmt(r[1])); });
   }
   function draw() {
-    document.querySelectorAll('svg[id^=ex]').forEach(s => s.innerHTML = '');
+    document.querySelectorAll('svg[id^=ex]:not(#ex9):not(#ex10)').forEach(s => s.innerHTML = '');
     const navy = css('--c-black'), blue = css('--c-blue'), silver = css('--c-silver'), red = css('--c-red'), gold = css('--c-gold'), rule = css('--rule'), ink2 = css('--ink-2');
     hbars('ex1', [['0~14세', 46.6], ['15~24세', 21.4], ['25~54세', 27.0], ['55세 이상', 5.0]], 50, v => v.toFixed(1) + '%', i => i === 0 ? blue : silver);
     el(document.getElementById('ex1'), 'text', { x: 150, y: 196, 'font-size': 12, class: 'muted' }, '0~14세 약 2,140만 명 (45.9M × 46.6%)');
